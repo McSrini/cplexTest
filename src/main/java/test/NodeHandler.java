@@ -19,6 +19,8 @@ public class NodeHandler  extends IloCplex.NodeCallback{
     public int numBestLpRelNodes = 0;
  
     protected void main() throws IloException {
+        numNodes++;
+        /*
         int bestIndex = 0;
         double bestLPRval =  Double.MAX_VALUE;
         long activeCount = getNremainingNodes64();
@@ -31,9 +33,12 @@ public class NodeHandler  extends IloCplex.NodeCallback{
         
         numNodes ++;
         if (0==bestIndex) numBestLpRelNodes++;
-        selectNode (bestIndex) ;
-        if (numNodes%1000 ==0) System.out.println("Nodehandeler : Num noedes "+  numNodes  + " and of these best lp relax were " + numBestLpRelNodes);
+        //selectNode (bestIndex) ;
+        if (numNodes%100 ==0) System.out.println(" ********************* Nodehandeler : Num noedes solved"+  numNodes  + " and of these best lp relax were " + numBestLpRelNodes);
         if (isHaltFilePresent()) abort();
+*/
+        
+        
     }
     
     private static boolean isHaltFilePresent (){

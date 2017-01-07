@@ -14,15 +14,21 @@ import ilog.cplex.IloCplex;
  */
 public class BranchHandler  extends IloCplex.BranchCallback{
     
+    public int numbrances = 0;
     
+    public double objVal= 10000000;
  
     protected void main() throws IloException {
+        numbrances += getNbranches();
+        /*
           if ( getNbranches()> 0 ){  
               //set the lp relax value into the kids
               for (int childNum = 0 ;childNum<getNbranches();  childNum++) {    
                    makeBranch(childNum, getObjValue() );
               }
           }
+*/objVal = getBestObjValue();
+        
     }
     
 }
